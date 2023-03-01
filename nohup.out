@@ -1,0 +1,293 @@
+INFO:     Will watch for changes in these directories: ['/root/QRCode_FastAPI']
+INFO:     Uvicorn running on http://192.168.16.140:8005 (Press CTRL+C to quit)
+INFO:     Started reloader process [9282] using statreload
+INFO:     Started server process [9284]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.200.242:53712 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     192.168.200.242:53712 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.200.242:53713 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     192.168.200.242:53747 - "GET /getmc431 HTTP/1.1" 200 OK
+INFO:     192.168.200.242:53747 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:44914 - "GET /getmc431 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:44914 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:44960 - "GET /getmc394 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:44960 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:45462 - "GET /getmc394 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:45462 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:45798 - "GET /getmc394 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:45798 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:45982 - "GET /getmc516 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:45982 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:45986 - "GET /getmc548 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:45986 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:45988 - "GET /getmc548 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:45988 - "GET /getlot HTTP/1.1" 404 Not Found
+INFO:     192.168.16.215:45992 - "GET /getmc548 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:45992 - "GET /getlot HTTP/1.1" 404 Not Found
+INFO:     192.168.16.215:46038 - "GET /getmc548 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:46038 - "GET /getlot HTTP/1.1" 404 Not Found
+INFO:     192.168.16.215:46048 - "GET /getmc547 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:46048 - "GET /getlot HTTP/1.1" 404 Not Found
+INFO:     192.168.16.215:46056 - "GET /getmc563 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:46056 - "GET /getlot HTTP/1.1" 404 Not Found
+INFO:     192.168.16.215:46136 - "GET /getmc0 HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.6/dist-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/usr/local/lib/python3.6/dist-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/routing.py", line 232, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/usr/local/lib/python3.6/dist-packages/anyio/to_thread.py", line 32, in run_sync
+    func, *args, cancellable=cancellable, limiter=limiter
+  File "/usr/local/lib/python3.6/dist-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/usr/local/lib/python3.6/dist-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/usr/local/lib/python3.6/dist-packages/contextvars/__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "./InsMachine.py", line 46, in get_mcdata
+    machineName = machine_name(mcid)[0]
+  File "./oracle_connection.py", line 44, in machine_name
+    return row_data[0]
+IndexError: list index out of range
+INFO:     192.168.16.215:46144 - "GET /getmc516 HTTP/1.1" 200 OK
+INFO:     192.168.16.215:46144 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [9284]
+INFO:     Stopping reloader process [9282]
+INFO:     Will watch for changes in these directories: ['/root/QRCode_FastAPI']
+INFO:     Uvicorn running on http://192.168.16.140:8005 (Press CTRL+C to quit)
+INFO:     Started reloader process [9898] using statreload
+INFO:     Started server process [9900]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.200.242:59739 - "GET /getInsMachineList HTTP/1.1" 200 OK
+INFO:     192.168.200.242:59751 - "GET /getmc610 HTTP/1.1" 200 OK
+INFO:     192.168.200.242:59751 - "GET /getlot HTTP/1.1" 404 Not Found
+INFO:     192.168.16.220:53470 - "GET /getInsMachineList HTTP/1.1" 200 OK
+INFO:     192.168.16.220:53470 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.200.242:60612 - "GET /getInsMachineList HTTP/1.1" 200 OK
+INFO:     192.168.200.242:50420 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     192.168.200.242:51082 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     192.168.200.242:51082 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [9900]
+INFO:     Stopping reloader process [9898]
+INFO:     Will watch for changes in these directories: ['/root/QRCode_FastAPI']
+INFO:     Uvicorn running on http://192.168.16.140:8005 (Press CTRL+C to quit)
+INFO:     Started reloader process [27264] using statreload
+INFO:     Started server process [27266]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     192.168.200.242:60185 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.200.242:60185 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     192.168.200.242:60186 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     192.168.200.242:60246 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     192.168.200.242:52930 - "GET /Inspection/pages HTTP/1.1" 404 Not Found
+INFO:     192.168.200.242:52930 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.200.242:53365 - "GET / HTTP/1.1" 200 OK
+INFO:     192.168.200.242:53365 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.200.242:54434 - "GET /getmc0 HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.6/dist-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/usr/local/lib/python3.6/dist-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/routing.py", line 232, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/usr/local/lib/python3.6/dist-packages/anyio/to_thread.py", line 32, in run_sync
+    func, *args, cancellable=cancellable, limiter=limiter
+  File "/usr/local/lib/python3.6/dist-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/usr/local/lib/python3.6/dist-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/usr/local/lib/python3.6/dist-packages/contextvars/__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "./InsMachine.py", line 46, in get_mcdata
+    machineName = machine_name(mcid)[0]
+  File "./oracle_connection.py", line 56, in machine_name
+    return row_data[0]
+IndexError: list index out of range
+INFO:     192.168.200.242:54522 - "GET /getmc0 HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.6/dist-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/usr/local/lib/python3.6/dist-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/routing.py", line 232, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/usr/local/lib/python3.6/dist-packages/anyio/to_thread.py", line 32, in run_sync
+    func, *args, cancellable=cancellable, limiter=limiter
+  File "/usr/local/lib/python3.6/dist-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/usr/local/lib/python3.6/dist-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/usr/local/lib/python3.6/dist-packages/contextvars/__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "./InsMachine.py", line 46, in get_mcdata
+    machineName = machine_name(mcid)[0]
+  File "./oracle_connection.py", line 56, in machine_name
+    return row_data[0]
+IndexError: list index out of range
+INFO:     192.168.200.242:54527 - "GET /getmc0 HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/uvicorn/protocols/http/h11_impl.py", line 373, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.6/dist-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/cors.py", line 92, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/middleware/cors.py", line 147, in simple_response
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/usr/local/lib/python3.6/dist-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/routing.py", line 232, in app
+    dependant=dependant, values=values, is_coroutine=is_coroutine
+  File "/usr/local/lib/python3.6/dist-packages/fastapi/routing.py", line 162, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "/usr/local/lib/python3.6/dist-packages/starlette/concurrency.py", line 41, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+  File "/usr/local/lib/python3.6/dist-packages/anyio/to_thread.py", line 32, in run_sync
+    func, *args, cancellable=cancellable, limiter=limiter
+  File "/usr/local/lib/python3.6/dist-packages/anyio/_backends/_asyncio.py", line 937, in run_sync_in_worker_thread
+    return await future
+  File "/usr/local/lib/python3.6/dist-packages/anyio/_backends/_asyncio.py", line 867, in run
+    result = context.run(func, *args)
+  File "/usr/local/lib/python3.6/dist-packages/contextvars/__init__.py", line 38, in run
+    return callable(*args, **kwargs)
+  File "./InsMachine.py", line 46, in get_mcdata
+    machineName = machine_name(mcid)[0]
+  File "./oracle_connection.py", line 56, in machine_name
+    return row_data[0]
+IndexError: list index out of range
+INFO:     192.168.200.242:54533 - "GET /getmc5 HTTP/1.1" 200 OK
+INFO:     192.168.200.242:54533 - "GET /getlot HTTP/1.1" 404 Not Found
+INFO:     192.168.200.242:54535 - "GET /getmc12 HTTP/1.1" 200 OK
+INFO:     192.168.200.242:54535 - "GET /getlot HTTP/1.1" 404 Not Found
+INFO:     192.168.200.242:54540 - "GET /getmc12 HTTP/1.1" 200 OK
+INFO:     192.168.200.242:54540 - "GET /getlotC230205594 HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [27266]
+INFO:     Stopping reloader process [27264]
